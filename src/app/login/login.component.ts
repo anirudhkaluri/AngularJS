@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  username:string='';
+  password:string='';
+  ngOnInit():void{
+  }
+
+  usernameChange(eventData:any){ 
+    this.username= (<HTMLInputElement>eventData.target).value; //eventData.target is of type <HTMLInputElement> . That target has value
+    console.log(this.username);
+    
+  }
+
+  passwordChange(eventData:any){
+    this.password=(<HTMLInputElement>eventData.target).value;
+  }
 }

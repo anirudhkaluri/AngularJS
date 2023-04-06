@@ -3,9 +3,9 @@
 <div>
     <form method="POST">
         <label for="username">Username:</label>
-        <input type="text" name="username" id="username" placeholder="Enter username"><br>
+        <input type="text" name="username" id="username" placeholder="Enter username" (input)="usernameChange($event)"><br>
         <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="Enter password"><br>
+        <input type="password" name="password" id="password" placeholder="Enter password" (input)="passwordChange($event)"><br>
         <button>Login</button>
     </form>
 </div>
