@@ -13,6 +13,10 @@ export class LoginComponent {
   ngOnInit():void{
   }
 
+  onSubmit(eventData:any){
+    
+  }
+
   usernameChange(eventData:any){ 
     this.username= (<HTMLInputElement>eventData.target).value; //eventData.target is of type <HTMLInputElement> . That target has value
     console.log(this.username);
