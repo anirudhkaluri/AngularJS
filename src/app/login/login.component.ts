@@ -9,6 +9,7 @@ export class LoginComponent {
 
   username:string='';
   password:string='';
+  TwoWayData:string='Hi I am two way data';
   ngOnInit():void{
   }
 
