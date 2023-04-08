@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  serverURI:string='http://localhost:8000/profile';
   title = 'firstangular';
 }
