@@ -2,3 +2,29 @@ EVENTS:
 
 (input) for text fields
 (ngsubmit) or (submit) for forms
+
+
+
+
+
+
+Node packages used:
+express
+nodemon
+mongoose
+jsonwebtoken
+dotenv
+bcryptjs
+cors
+
+
+
+Node middleware used:
+express.json()
+express.urlencoded()
+Routing
+
+
+Things to remember:
+Export the Models
+.js files of the Models must be named after the model
