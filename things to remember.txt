@@ -1,0 +1,4 @@
+EVENTS:
+
+(input) for text fields
+(ngsubmit) or (submit) for forms

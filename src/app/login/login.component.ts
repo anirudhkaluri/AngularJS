@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -6,15 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  @Input() uri:string;
   username:string='';
   password:string='';
   TwoWayData:string='Hi I am two way data';
   ngOnInit():void{
+    this.uri=this.uri+'/login';
   }
 
-  onSubmit(eventData:any){
-    
+  async onSubmit(eventData:any){
+    const response=await fetch()
   }
 
   usernameChange(eventData:any){ 
