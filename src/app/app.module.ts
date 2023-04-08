@@ -8,6 +8,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { TokenstorageService } from './tokenstorage.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    TokenstorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
