@@ -1,17 +1,14 @@
-<h1>Create User Page</h1>
+
+
+<h1>Login Page</h1>
 
 <div>
-    
-    <form (ngSubmit)="loginUser()" method="POST">
+
+    <form (ngSubmit)="loginUser()">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" placeholder="Enter username" (input)="usernameChange($event)"><br>
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" placeholder="Enter password" (input)="passwordChange($event)"><br>
         <button>Login User</button>
     </form>
-
-    <h1>TWO WAY DATA BINDING</h1>
-    <input type="text" [(ngModel)]="TwoWayData">
-    <h2>This is the two way data:</h2>
-    <p>{{TwoWayData}}</p>
 </div>
