@@ -7,11 +7,11 @@ import { TokenstorageService } from '../tokenstorage.service';
 export class HomepageComponent {
   myblogs:any=[];
   token:any=null;
-  uri:string='http://localhost:8000/blog/home';
+  uri:string='http://localhost:8000/blog';
   constructor(private tokenService:TokenstorageService){}
   async ngOnInit(){
     this.token=this.tokenService.getToken();
-    const response=await fetch(this.uri,{
+    const response=await fetch(this.uri+'/home',{
       method:'GET',
       mode:'cors',
       credentials:'include',
@@ -21,8 +21,16 @@ export class HomepageComponent {
     });
     this.myblogs=await response.json();
   }
-  onDelete(blogid:any){
-
+  async onDelete(blogid:any){
+    this.myblogs=this.myblogs.filter((item:any)=>{return item._id!=blogid});
+    const response=await fetch(this.uri+'/delete/'+blogid.toString(),{
+      method:'DELETE',
+      mode:'cors',
+      credentials:'include',
+      headers:{
+        'Authorization':`Bearer ${this.token}`
+      }
+    });
   }
   onModify(blogid:any){
 
