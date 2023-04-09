@@ -1,1 +1,12 @@
-<p>create-blog works!</p>
+<div class="createBlog">
+
+    <h1>Write whats on your mind</h1>
+    <form (ngSubmit)="onSubmit()">
+        <label for="blog_title">Blog Title:</label>
+        <input type="text" (input)="onTitleChange($event)" id="blog_title"><br>
+        <label for="blog_content">Blog Content:</label>
+        <textarea (input)="onContentChange($event)" id="blog_content"></textarea>
+    </form>
+
+
+</div>
