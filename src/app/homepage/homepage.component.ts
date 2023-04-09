@@ -22,7 +22,7 @@ export class HomepageComponent {
     this.myblogs=await response.json();
   }
   async onDelete(blogid:any){
-    this.myblogs=this.myblogs.filter((item:any)=>{return item._id!=blogid});
+    this.myblogs=this.myblogs.filter((item:any)=>{return item._id!=blogid;});
     const response=await fetch(this.uri+'/delete/'+blogid.toString(),{
       method:'DELETE',
       mode:'cors',
