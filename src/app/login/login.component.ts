@@ -15,7 +15,7 @@ export class LoginComponent {
   TwoWayData:string='Hi I am two way data';
 
   ngOnInit():void{
-   // this.uri=this.uri+'/login';
+   
   }
 
   async loginUser(){

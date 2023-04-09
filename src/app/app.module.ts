@@ -9,6 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { TokenstorageService } from './tokenstorage.service';
+import { JwtRouteGuardService } from './jwt-route-guard.service';
+import { BlogFeedComponent } from './blog-feed/blog-feed.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { TokenstorageService } from './tokenstorage.service';
     LoginComponent,
     RegisterUserComponent,
     NavbarComponent,
-    HomepageComponent
+    HomepageComponent,
+    BlogFeedComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { TokenstorageService } from './tokenstorage.service';
     AppRoutingModule
   ],
   providers: [
-    TokenstorageService
+    TokenstorageService,
+    JwtRouteGuardService
   ],
   bootstrap: [AppComponent]
 })
