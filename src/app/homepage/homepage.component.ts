@@ -35,4 +35,7 @@ export class HomepageComponent {
   onModify(blogid:any){
 
   }
+  receiveData(eventData:any){
+    this.myblogs=[...this.myblogs,eventData];
+  }
 }

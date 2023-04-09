@@ -13,6 +13,7 @@ export class CreateBlogComponent {
   uri:string='http://localhost:8000/blog/add';
   @Output() dataevent=new EventEmitter();
   constructor(private tokenService:TokenstorageService){}
+  
   async onSubmit(){
     this.token=this.tokenService.getToken();
     const response=await fetch(this.uri,{
