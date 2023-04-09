@@ -1,1 +1,11 @@
+
+
 <p>blog-feed works!</p>
+<app-navbar></app-navbar>
+<div class="allBlogs">
+    <h1>All Blogs Feed</h1>
+    <div *ngFor="let item of blogs" id="{{item._id}}">
+         <h3>{{item.blog_title}}</h3>   
+        <p>{{item.blog_content}}</p>
+    </div>
+</div>

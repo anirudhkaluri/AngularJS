@@ -4,7 +4,7 @@ import { TokenstorageService } from '../tokenstorage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+
 })
 export class LoginComponent {
   constructor(private router:Router,private tokenStore:TokenstorageService){}
@@ -32,7 +32,7 @@ export class LoginComponent {
       const response_body=await response.json();
       if(response_body.userExists){
         this.tokenStore.setToken(response_body.jwt);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/feed']);
       }
       else{
         console.log("user doesnt exists");
