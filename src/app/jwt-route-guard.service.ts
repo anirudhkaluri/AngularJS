@@ -17,12 +17,13 @@ export class JwtRouteGuardService {
   | UrlTree{
     const token:string|null=this.tokenStore.getToken();
     console.log('we are in canActivate');
-    if(token===null){
+    if(token===null || token===''){
+      console.log('routing to login');
+      console.log('the jwt token is',token);
       this.router.navigate(['/login']);
       return false;
     }
-    
-    
+      console.log('the jwt token is',token);
       return true;
   }
 }

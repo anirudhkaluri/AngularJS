@@ -1,1 +1,10 @@
-<p>homepage works!</p>
+<app-navbar></app-navbar>
+<div class="myBlogs">
+    <h1>MY BLOGS</h1>
+    <div class="myblog" *ngFor="let item of myblogs" id="{{item._id}}">
+        <h3>{{item.blog_title}}</h3>
+        <p>{{item.blog_content}}</p>
+        <button (click)="onDelete(item._id)">Delete</button>
+        <button (click)="onModify(item._id)">Edit</button>
+    </div>
+</div>

@@ -5,5 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './homepage.component.html',
 })
 export class HomepageComponent {
+  myblogs:any=[];
 
+  onDelete(blogid:any){
+
+  }
+  onModify(blogid:any){
+
+  }
 }
