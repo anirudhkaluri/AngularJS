@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { TokenstorageService } from './tokenstorage.service';
 import { JwtRouteGuardService } from './jwt-route-guard.service';
 import { BlogFeedComponent } from './blog-feed/blog-feed.component';
+import { CreateBlogComponent } from './create-blog/create-blog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BlogFeedComponent } from './blog-feed/blog-feed.component';
     RegisterUserComponent,
     NavbarComponent,
     HomepageComponent,
-    BlogFeedComponent
+    BlogFeedComponent,
+    CreateBlogComponent
   ],
   imports: [
     BrowserModule,
